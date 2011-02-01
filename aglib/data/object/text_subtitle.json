@@ -1,0 +1,9 @@
+{
+    "template": "text",
+    "color":    [224,224,224],
+    "offset":   [0,64],
+    "actions":  [ "move_random", "collide_edge" ],
+
+    "text_size":    24,
+    "text_content": "An unfinished demo of an unfinished framework"
+}

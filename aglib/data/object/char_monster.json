@@ -1,0 +1,6 @@
+{
+    "template": "char",
+    "group":    "monster",
+    "pos":      [12,1],
+    "actions":  [ "collide_edge", "move_random", "collide_player" ]
+}

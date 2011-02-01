@@ -1,0 +1,10 @@
+{
+    "template": "text",
+    "color":    [255,0,0],
+    "offset":   [0,-64],
+    "actions":  [ "move_random", "collide_edge" ],
+    "cursor":   true,
+
+    "text_size":    48,
+    "text_content": "Demo Game"
+}

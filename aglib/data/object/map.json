@@ -1,0 +1,5 @@
+{
+    "template": "base",
+    "group":    "map",
+    "size":     [800,600]
+}

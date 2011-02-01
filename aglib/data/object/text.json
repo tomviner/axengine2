@@ -1,0 +1,10 @@
+{
+    "template": "base",
+    "group":    "text",
+    "color":    [255,255,255],
+    "speed":    1,
+
+    "text_font":    "menu",
+    "text_size":    16,
+    "text_content": "Sample text"
+}

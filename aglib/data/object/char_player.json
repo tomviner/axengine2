@@ -1,0 +1,6 @@
+{
+    "template": "char",
+    "group":    "player",
+    "pos":      [1,1],
+    "cursor":   true
+}

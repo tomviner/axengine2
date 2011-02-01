@@ -1,0 +1,16 @@
+{
+    "template":     "base",
+    "group":        "char",
+    "size":         [32,48],
+    "align":        "tile",
+    "image":        "char",
+    "actions":      [ "collide_edge" ],
+
+    "char_hp":          [1,1],
+    "char_mp":          [0,0],
+    "char_atk":         1,
+    "char_def":         1,
+    "char_items":       [],
+    "char_spells":      []
+}
+

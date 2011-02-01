@@ -1,0 +1,8 @@
+{
+    "objects":  [ "map", "text_title", "text_subtitle" ],
+    "controls": {
+        "return":   "new_game",
+        "escape":   "quit",
+        "up":       "menu_up",
+        "down":     "menu_down" }
+}

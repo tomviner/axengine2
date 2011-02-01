@@ -1,0 +1,12 @@
+{
+    "group":    null,
+    "size":     [32,32],
+    "align":    "relative",
+    "pos":      "center",
+    "offset":   [0,0],
+    "color":    [0,0,0],
+    "image":    null,
+    "speed":    1,
+    "cursor":   false,
+    "actions":  []
+}

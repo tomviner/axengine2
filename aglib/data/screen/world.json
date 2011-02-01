@@ -1,0 +1,9 @@
+{
+    "objects":  [ "map_world1", "char_player" ],
+    "controls": {
+        "up":       "move_up",
+        "down":     "move_down",
+        "left":     "move_left",
+        "right":    "move_right",
+        "escape":   "quit" }
+}
