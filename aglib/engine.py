@@ -3,8 +3,23 @@ from pygame import init, display, event, key
 from pygame.locals import KEYDOWN, KEYUP, FULLSCREEN
 from aglib import util, State, Clock, Screen, actions
 
+#
+# TJG: Pretty much everything in this game engine is
+# done via JSON-serialised objects. It's not entirely
+# clear why this should be but it will at least make
+# it easier for us to interoperate with Dojos from
+# other languages.
+#
+
 class Engine(object):
     def __init__(self, name='demo'):
+        """Initialise pygame and load the parameters for the game indicated
+        by the `name` param. Start the clock for the screen's frame rate and
+        create a window surface for the game's screen size.
+
+        Create each of the screen objects referenced by the game and store
+        their state, ready to show.
+        """
         init()
         State.game = util.load_game(name)
         State.clock = Clock(10, State.game['frame_rate'])

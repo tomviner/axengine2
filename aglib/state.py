@@ -10,6 +10,13 @@ default_attrs = [
 ]
 states = {}
 
+#
+# TJG: This is an very simple in-memory singleton object store:
+# only one object at a time can be "active"; the rest are stored
+# in state dictionaries keyed by name. Then the whole state is
+# stored in the module-global states dictionary.
+#
+
 class State(object):
     '''A container for various game objects and data that can be easily
         accessed without unnecessarily passing them around in constructors.'''
