@@ -37,6 +37,14 @@ def load_font(data):
 def load_image(file):
     return image.load(file)
 
+#
+# TJG: This appears to be an attempt to reimplement
+# object single-inheritance in JSON! The char_player.json
+# file, for example, lists the char as its template
+# so the extra fields of the latter are filled in on
+# the former. This works recursively so further base
+# classes can be applied.
+#
 def load_object(obj):
     '''Load a data resource and recursively set the attributes of its
         children templates.
