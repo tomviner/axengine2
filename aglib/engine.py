@@ -3,6 +3,8 @@ from pygame.locals import KEYDOWN, KEYUP, FULLSCREEN
 from aglib import util, State, Clock, Screen, actions
 
 class Engine(object):
+    """An engine provides a top-level game object that can be used to
+        initialize a game from the specified game configuration resource"""
 
     def __init__(self, name='demo'):
         init()
@@ -11,23 +13,31 @@ class Engine(object):
         State.window = display.set_mode(State.game['screen_size'])
         self.create_screens()
 
-    def add(self, screen, object, amount=1, pos=None):
+    def add_object(self, screen, object, amount=1, pos=None):
+        """Add one or more instances of an object to a screen."""
+
         State.restore(screen)
         State.screen.add_object(object, amount, pos)
         State.save(screen)
 
     def create_screen(self, name):
+        """Create a new screen and save it to a state of the same name for
+            retrieval."""
+
         State.screen = Screen(name)
         State.save(name)
 
     def create_screens(self):
-        for s in State.game['screens']:
-            self.create_screen(s)
+        """Create all of the game screens specified in the game configuration.
 
-    def show(self, screen):
-        State.restore(screen)
+        Called when the engine is first initialized."""
+
+        for name in State.game['screens']:
+            self.create_screen(name)
 
     def check_events(self):
+        """Input checking."""
+
         cursor_keys = ("move_up", "move_down", "move_left", "move_right")
         screen_keys = ("quit", "new_game")
         for e in event.get():
@@ -49,12 +59,26 @@ class Engine(object):
                             if State.pressed:
                                 State.pressed[-1](State.cursor)
 
+    def update(self):
+        """Called whenever the game clock determines that game mechanics are
+            ready to be updated."""
+
+        self.check_events()
+
+    def draw(self):
+        """Called whenever the game clock determines that a frame is ready to
+            be drawn."""
+
+        State.screen.draw()
+
     def run(self, screen):
+        """Main game loop."""
+
         State.running = True
-        self.show(screen)
+        State.restore(screen)
         while State.running:
             State.clock.tick()
             if State.clock.update_ready():
-                self.check_events()
+                self.update()
             if State.clock.frame_ready():
-                State.screen.draw()
+                self.draw()

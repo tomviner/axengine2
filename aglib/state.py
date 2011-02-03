@@ -1,5 +1,7 @@
 from aglib import util
 
+__doc__ = """An object store for convenient access to game objects."""
+
 # These are the default attributes that will be saved/restored and persist
 # across state changes.
 default_attrs = [
@@ -15,15 +17,15 @@ default_attrs = [
 states = {}
 
 class State(object):
-    """A state manages the different game data across the different states a
-        game may be in.
+    """A state gives global access to game objects. Any attribute can be
+        manually modified after running restore() on the desired state. Running
+        save() on the modified file will keep the changes when leaving and
+        returning to the state later.
 
-    resource caches
+    attributes
     images:     a cache of image resources.
     objects:    a cache of game object resources.
     screens:    a cache of screen configuration resources.
-
-    state attributes
     name:       the name of the state.
     prev_name:  the name of the previous state.
     cursor:     the sprite which has been marked as the cursor.

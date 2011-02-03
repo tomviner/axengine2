@@ -3,6 +3,8 @@ from json import JSONDecoder
 from pygame import font, image, Rect, Surface
 from pygame.locals import RLEACCEL
 
+__doc__ = """Various utility functions."""
+
 aglib_dir = path.abspath(path.dirname(__file__))
 aglib_data = path.normpath(path.join(aglib_dir, 'data'))
 
@@ -41,13 +43,13 @@ def load_object(name):
     return data
 
 def load_cfg(name):
-    """Load a game configuration."""
+    """Load a game configuration resource."""
 
     file = get_path('cfg', name)
     return load_object(file)
 
 def load_screen(name):
-    """Load a screen configuration."""
+    """Load a screen configuration resource."""
 
     return load_object(name)
 
