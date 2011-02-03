@@ -1,12 +1,13 @@
 #!/usr/bin/python2
 import aglib
 
-# Load the 'demo' game.
+"""Create the game engine using the 'demo' game configuration."""
 game = aglib.Engine('demo')
 
-# The demo game already adds a map and a player character to the world screen.
-# Here we add a bunch of monsters to the world screen.
+"""The demo game contains a 'title' and 'world' screen. The default world
+    screen has a map and a player object. Here, we will modify the world screen
+    and add a few monsters, each starting in a random location."""
 game.add('world', 'char_monster', 20, 'random')
 
-# Actually run the game starting at the title screen.
+"""Run the engine starting at the 'title' screen."""
 game.run('title')

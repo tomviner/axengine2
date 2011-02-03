@@ -1,24 +1,19 @@
-from random import randint
 from pygame import init, display, event, key
 from pygame.locals import KEYDOWN, KEYUP, FULLSCREEN
 from aglib import util, State, Clock, Screen, actions
 
 class Engine(object):
+
     def __init__(self, name='demo'):
         init()
-        State.game = util.load_game(name)
+        State.game = util.load_cfg(name)
         State.clock = Clock(10, State.game['frame_rate'])
         State.window = display.set_mode(State.game['screen_size'])
         self.create_screens()
 
-    def add(self, screen, name, amount, pos=None):
+    def add(self, screen, object, amount=1, pos=None):
         State.restore(screen)
-        for i in range(0, amount):
-            if pos == 'random':
-                new_pos = (randint(0,800/32), randint(0,600/48))
-            else:
-                new_pos = None
-            State.screen.add_object(name, new_pos)
+        State.screen.add_object(object, amount, pos)
         State.save(screen)
 
     def create_screen(self, name):

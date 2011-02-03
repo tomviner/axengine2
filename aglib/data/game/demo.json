@@ -1,8 +1,0 @@
-{
-    "game_name":        "Demo",
-    "game_ver":         0.1,
-    "screen_size":      [800,600],
-    "fullscreen":       true,
-    "frame_rate":       60,
-    "screens":          [ "title", "world" ]
-}
