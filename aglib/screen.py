@@ -49,6 +49,8 @@ class Screen(object):
             State.groups[group].add(sprite)
         if obj['cursor']:
             State.cursor = sprite
+        if obj['joystick']:
+            State.joystick = sprite
         self.layers.add(State.groups[group])
 
     def draw(self):

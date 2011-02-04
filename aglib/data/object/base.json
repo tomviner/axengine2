@@ -8,5 +8,6 @@
     "image":    null,
     "speed":    1,
     "cursor":   false,
+    "joystick":   false,
     "actions":  []
 }

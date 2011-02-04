@@ -8,6 +8,7 @@ default_attrs = [
     'name',
     'objects',
     'cursor',
+    'joystick',
     'groups',
     'screen',
     'controls',
@@ -15,13 +16,6 @@ default_attrs = [
 
 # A dictionary of state names and their attributes.
 states = {}
-
-#
-# TJG: This is an very simple in-memory singleton object store:
-# only one object at a time can be "active"; the rest are stored
-# in state dictionaries keyed by name. Then the whole state is
-# stored in the module-global states dictionary.
-#
 
 class State(object):
     """A state gives global access to game objects. Any attribute can be
@@ -36,6 +30,7 @@ class State(object):
     name:       the name of the state.
     prev_name:  the name of the previous state.
     cursor:     the sprite which has been marked as the cursor.
+    joysick:    the sprite which can be controlled by a joystick
     screen:     the screen to draw to for the current state.
     groups:     a dictionary of the current sprite groups.
     controls:   the input controls for the current state, as specified in each
@@ -48,6 +43,7 @@ class State(object):
     name = None
     prev_name = None
     cursor = None
+    joystick = None
     screen = None
     groups = {}
     controls = {}
