@@ -5,5 +5,5 @@
     "actions":  [ "quit_menu" ],
 
     "text_size":    24,
-    "text_content": "Quit"
+    "text_content": "Quit (Esc)"
 }
