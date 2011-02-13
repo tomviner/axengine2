@@ -137,6 +137,9 @@ class Player(Character):
     def __init__(self, obj):
         Character.__init__(self, obj)
 
+class Player2(Character):
+    def __init__(self, obj):
+        Character.__init__(self, obj)
 
 class Monster(Character):
     def __init__(self, obj):

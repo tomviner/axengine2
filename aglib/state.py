@@ -8,6 +8,7 @@ default_attrs = [
     'name',
     'objects',
     'cursor',
+    'joystick',
     'groups',
     'screen',
     'controls',
@@ -29,6 +30,7 @@ class State(object):
     name:       the name of the state.
     prev_name:  the name of the previous state.
     cursor:     the sprite which has been marked as the cursor.
+    joysick:    the sprite which can be controlled by a joystick
     screen:     the screen to draw to for the current state.
     groups:     a dictionary of the current sprite groups.
     controls:   the input controls for the current state, as specified in each
@@ -41,6 +43,7 @@ class State(object):
     name = None
     prev_name = None
     cursor = None
+    joystick = None
     screen = None
     groups = {}
     controls = {}

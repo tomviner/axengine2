@@ -1,5 +1,5 @@
 {
-    "objects":  [ "map_world1", "char_player" ],
+    "objects":  [ "map_world1", "char_player2", "char_player" ],
     "controls": {
         "up":       "move_up",
         "down":     "move_down",

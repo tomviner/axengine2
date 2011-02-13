@@ -1,0 +1,7 @@
+{
+    "template": "char",
+    "group":    "player",
+    "pos":      [5, 5],
+    "char_hp":          [5,5],
+    "joystick":   true
+}
