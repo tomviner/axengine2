@@ -9,6 +9,19 @@ def quit(screen):
     if State.name == 'title': exit()
     else: screen.switch(State.prev_name)
 
+def help_menu(screen):
+    if State.name == 'help_screen':
+        screen.switch(State.prev_name)
+    else:
+        # blank the screen. how?
+        screen.switch('help_screen')
+    
+def setup(screen):
+    pass
+        
+def quit_menu(screen):
+    pass
+
 def collide_edge(obj):
     w,h = State.window.get_size()
     obj.rect.clamp_ip(Rect(0, 0, w, h))

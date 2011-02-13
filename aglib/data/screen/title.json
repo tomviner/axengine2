@@ -1,8 +1,10 @@
 {
-    "objects":  [ "map", "text_title", "text_subtitle" ],
+    "objects":  [ "map", "text_title", "text_subtitle", "start_game_menu", "help_menu", "setup_menu", "quit_menu" ],
     "controls": {
         "return":   "new_game",
         "escape":   "quit",
         "up":       "menu_up",
-        "down":     "menu_down" }
+        "down":     "menu_down",
+        "h":        "help_menu"
+        }
 }

@@ -4,5 +4,5 @@
     "screen_size":      [800,600],
     "fullscreen":       true,
     "frame_rate":       60,
-    "screens":          [ "title", "world" ]
+    "screens":          [ "title", "world", "help_screen" ]
 }

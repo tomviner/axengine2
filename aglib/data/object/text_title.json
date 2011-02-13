@@ -1,7 +1,7 @@
 {
     "template": "text",
     "color":    [255,0,0],
-    "offset":   [0,-64],
+    "offset":   [0,-200],
     "actions":  [ "move_random", "collide_edge" ],
     "cursor":   true,
 

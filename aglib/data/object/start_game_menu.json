@@ -1,0 +1,9 @@
+{
+    "template": "text",
+    "color":    [224,224,224],
+    "offset":   [0,0],
+    "actions":  [ ],
+
+    "text_size":    24,
+    "text_content": "Start game"
+}

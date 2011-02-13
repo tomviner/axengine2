@@ -1,0 +1,9 @@
+{
+    "template": "text",
+    "color":    [224,224,224],
+    "offset":   [0,120],
+    "actions":  [ "setup" ],
+
+    "text_size":    24,
+    "text_content": "Set-up"
+}

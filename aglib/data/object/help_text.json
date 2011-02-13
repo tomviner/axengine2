@@ -1,0 +1,9 @@
+{
+    "template": "text",
+    "color":    [224,224,224],
+    "offset":   [0,-100],
+    "actions":  [ ],
+
+    "text_size":    24,
+    "text_content": "This is the help screen. Press escape to ..."
+}
